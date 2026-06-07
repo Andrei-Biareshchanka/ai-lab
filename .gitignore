@@ -1,3 +1,6 @@
+# MCP local config (contains machine-specific absolute paths)
+.mcp.json
+
 # Environment — NEVER commit real API keys
 .env
 .env.local
