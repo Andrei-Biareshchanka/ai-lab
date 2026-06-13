@@ -74,6 +74,11 @@ async function main() {
     const response = await client.messages.create({
       model: "claude-sonnet-4-5",
       max_tokens: 1024,
+      system:
+        "You are a parable guide. When the user describes a situation or asks for wisdom, " +
+        "always use the search_parables tool to find relevant parables from the library. " +
+        "Never invent or recall parables from memory — only use what the tool returns. " +
+        "After receiving results, choose the most fitting parable and explain why it speaks to the user's situation.",
       tools,
       messages,
     });
